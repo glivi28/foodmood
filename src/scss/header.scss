@@ -1,7 +1,68 @@
 //====================================================================================================
-
+.header {
+	z-index: 20;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: rem(35) 0;
+	// .header__container
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: rem(30);
+	}
+	// .header__logo
+	&__logo {
+	}
+	// .header__menu
+	&__menu {
+		display: flex;
+		align-items: center;
+	}
+}
+.menu {
+	// .menu__body
+	&__body {
+		margin-right: rem(55);
+	}
+	// .menu__list
+	&__list {
+		display: flex;
+		align-items: center;
+	}
+	// .menu__item
+	&__item {
+		&:not(:last-child) {
+			margin-right: rem(44);
+		}
+	}
+	// .menu__link
+	&__link {
+		font-weight: 700;
+		font-size: rem(14);
+		line-height: math.div(21, 14);
+		color: $white;
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $accentColor;
+			}
+		}
+	}
+	// .menu__btn
+	&__btn {
+	}
+	// .menu__icon
+	&__icon {
+	}
+}
+.btn {
+}
+.icon-menu {
+}
 //====================================================================================================
-
 //Burger
 /*
 .icon-menu {

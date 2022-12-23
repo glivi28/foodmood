@@ -1,15 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
-	@@include('html/_head.htm',{
-	"title":"HomePage"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_js.htm',{})
-	</body>
+@@include('html/_head.htm',{
+"title":"FoodMood"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="hero">
+				<div class="hero__container">
+					<div class="hero__info">
+						<h1 class="hero__headline">
+							<span class="hero__price">Only $15.00</span>
+							<span class="hero__title">AUTHENTIC ITALIAN PIZZA</span>
+						</h1>
+						<div class="hero__order">
+							<div class="hero__discount">
+								<span class="hero__percent">20%</span>
+								<span>DISCOUNT</span>
+							</div>
+							<p class="hero__text">On your first order, if you order online through our App!</p>
+						</div>
+						<a href="#" class="hero__btn btn">ORDER ONLINE</a>
+					</div>
+				</div>
+			</section>
+			<!-- /.hero -->
+
+			<section class="categories">
+				<div class="categories__container">
+					<h2 class="headline headline_text-center categories__headline">
+						<span class="headline__subtite">TOP FOODS</span>
+						<span class="headline__title">Our Categories</span>
+					</h2>
+					<ul class="categories__food food-categories">
+						<li class="food-categories__item">
+							<div class="food-categories__image-ibg food-categories__image-ibg_contain">
+								<img src="@img/pizza.png" alt="Pizza">
+							</div>
+							<h3 class="food-categories__title">Pizza</h3>
+							<p class="food-categories__count">20 Restaurants Foods</p>
+						</li>
+						<li class="food-categories__item">
+							<div class="food-categories__image-ibg food-categories__image-ibg_contain">
+								<img src="@img/pasta.png" alt="Pasta">
+							</div>
+							<h3 class="food-categories__title">Pasta</h3>
+							<p class="food-categories__count">15 Restaurants Foods</p>
+						</li>
+						<li class="food-categories__item">
+							<div class="food-categories__image-ibg food-categories__image-ibg_contain">
+								<img src="@img/shakes.png" alt="Shakes">
+							</div>
+							<h3 class="food-categories__title">Shakes</h3>
+							<p class="food-categories__count">20 Restaurants Foods</p>
+						</li>
+						<li class="food-categories__item">
+							<div class="food-categories__image-ibg food-categories__image-ibg_contain">
+								<img src="@img/burger.png" alt="Burger">
+							</div>
+							<h3 class="food-categories__title">Burger</h3>
+							<p class="food-categories__count">25 Restaurants Foods</p>
+						</li>
+					</ul>
+				</div>
+				<div class="categories__advantages">
+					<div class="categories__container">
+						<ul class="categories__list advantages">
+							<li class="advantages__item">
+								<div class="advantages__icon">
+									<svg>
+										<use xlink:href="@img/icons/icons.svg#car"></use>
+									</svg>
+								</div>
+								<h4 class="advantages__title">
+									Free Shipping on <br> First Order
+								</h4>
+								<p class="advantages__text text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+									eiusmod
+								</p>
+							</li>
+							<li class="advantages__item">
+								<div class="advantages__icon">
+									<svg>
+										<use xlink:href="@img/icons/icons.svg#burger"></use>
+									</svg>
+								</div>
+								<h4 class="advantages__title">
+									Variety of <br> Dishes
+								</h4>
+								<p class="advantages__text text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+									eiusmod
+								</p>
+							</li>
+							<li class="advantages__item">
+								<div class="advantages__icon">
+									<svg>
+										<use xlink:href="@img/icons/icons.svg#clock"></use>
+									</svg>
+								</div>
+								<h4 class="advantages__title">
+									Thirty Minutes <br> Delivery
+								</h4>
+								<p class="advantages__text text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+									eiusmod
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<!-- /.categories -->
+
+			<section class="outlets">
+				<div class="outlets__container">
+					<h2 class="headline headline_text-center">
+						<span class="headline__subtite">OUR OUTLETS</span>
+						<span class="headline__title">Find an Outlet Near You</span>
+					</h2>
+					<ul class="outlets__list">
+						<li class="outlets__item">
+							<div class="outlets__image-ibg">
+								<img src="@img/fulton.jpg" alt="Fulton">
+							</div>
+							<div class="outlets__icon">
+								<svg>
+									<use xlink:href="@img/icons/icons.svg#map"></use>
+								</svg>
+							</div>
+							<h3 class="outlets__location">762 Fulton St San Francisco, California(CA), 94102</h3>
+						</li>
+						<li class="outlets__item">
+							<div class="outlets__image-ibg">
+								<img src="@img/ceres.jpg" alt="Ceres">
+							</div>
+							<div class="outlets__icon">
+								<svg>
+									<use xlink:href="@img/icons/icons.svg#map"></use>
+								</svg>
+							</div>
+							<h3 class="outlets__location">66 Ceres St San Francisco, California(CA), 94124</h3>
+						</li>
+						<li class="outlets__item">
+							<div class="outlets__image-ibg">
+								<img src="@img/sutter.jpg" alt="Sutter">
+							</div>
+							<div class="outlets__icon">
+								<svg>
+									<use xlink:href="@img/icons/icons.svg#map"></use>
+								</svg>
+							</div>
+							<h3 class="outlets__location">766 Sutter St San Francisco, California(CA), 94109</h3>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- /.outlets -->
+
+			<section class="delivery">
+				<div class="delivery__container">
+					<div class="delivery__info">
+						<h2 class="headline headline_under delivery__headline">
+							<span class="headline__subtite">PIZZA DELIVERY</span>
+							<span class="headline__title headline__title_under">Get Started Today!</span>
+						</h2>
+						<h3 class="delivery__caption">Everything you need to build an amazing food restaurant responsive website.</h3>
+						<p class="delivery__text text"></p>
+						<ul class="delivery__items">
+							<li class="delivery__item">
+								<div class="delivery__image">
+									<img src="@img/money.png" alt="Money">
+								</div>
+								<h4 class="delivery__name">Food Order</h4>
+								<p class="delivery__descr text">Food is the necessity of life. It provides nutrition, sustenance growth
+									to human body.</p>
+							</li>
+							<li class="delivery__item">
+								<div class="delivery__image">
+									<img src="@img/promote.png" alt="Money">
+								</div>
+								<h4 class="delivery__name">Promote Restaurant</h4>
+								<p class="delivery__descr text">Food can be classified into cereals, pulses, nuts and oilseeds,
+									vegetable</p>
+							</li>
+						</ul>
+					</div>
+					<div class="delivery__image-ibg">
+						<img src="@img/client.jpg" alt="Girl with pizza">
+					</div>
+
+				</div>
+			</section>
+			<!-- /.devivery -->
+
+			<section class="team">
+				<div class="team__container">
+					<h2 class="headline headline_text-center headline_under team__headline">
+						<span class="headline__subtite">TEAM MEMBERS</span>
+						<span class="headline__title headline__title_under headline__title_center">Meet Our Best Team</span>
+					</h2>
+					<ul class="team__list">
+						<li class="team__item">
+							<div class="team__image">
+								<img src="@img/person-01.png" alt="Team member">
+							</div>
+							<h3 class="team__member">Alizeh Anderson</h3>
+							<p class="team__position">Senior Chef</p>
+						</li>
+						<li class="team__item">
+							<div class="team__image">
+								<img src="@img/person-02.png" alt="Team member">
+							</div>
+							<h3 class="team__member">Angelina John</h3>
+							<p class="team__position">Master Chef</p>
+						</li>
+						<li class="team__item">
+							<div class="team__image">
+								<img src="@img/person-03.png" alt="Team member">
+							</div>
+							<h3 class="team__member">Andre Smith</h3>
+							<p class="team__position">Professor</p>
+						</li>
+						<li class="team__item">
+							<div class="team__image">
+								<img src="@img/person-04.png" alt="Team member">
+							</div>
+							<h3 class="team__member">Christian Chi</h3>
+							<p class="team__position">Psychologist</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- /.team -->
+
+			<section class="offer">
+				<div class="offer__container">
+					<div class="offer__info">
+						<h2 class="offer__title">Get 20% Discount</h2>
+						<p class="offer__text">Get flat 20% off on your first order though The Foodmood App!</p>
+						<div class="offer__btns">
+							<a href="#" class="offer__btn">
+								<img src="@img/google-play.png" alt="Goooge Play">
+							</a>
+							<a href="#" class="offer__btn">
+								<img src="@img/app-store.png" alt="App Store">
+							</a>
+						</div>
+					</div>
+					<div class="offer__image-ibg">
+						<img src="@img/mobile.png" alt="Mobile">
+					</div>
+				</div>
+			</section>
+			<!-- /.offer -->
+
+			<section class="partners">
+				<div class="partners__container">
+					<h2 class="visuallyhidden">Partners</h2>
+					<ul class="partners__list">
+						<li class="partners__item">
+							<div class="partners__image-ibg">
+								<img src="@img/foodchef.png" alt="Food Chef">
+							</div>
+						</li>
+						<li class="partners__item">
+							<div class="partners__image-ibg">
+								<img src="@img/lezatoz.png" alt="Lezatoz">
+							</div>
+						</li>
+						<li class="partners__item">
+							<div class="partners__image-ibg">
+								<img src="@img/chef.png" alt="Chef Ganteng">
+							</div>
+						</li>
+						<li class="partners__item">
+							<div class="partners__image-ibg">
+								<img src="@img/tastyfood.png" alt="Food Chef">
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- /.partners -->
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
 </html>
