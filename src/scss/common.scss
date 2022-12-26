@@ -10,19 +10,21 @@
 	// .headline__subtite
 	&__subtite {
 		margin-bottom: rem(5);
-		font-size: rem(18);
+		@include adaptiveValue("font-size", 18, 14, 0, 992, 480);
 		line-height: math.div(27, 18);
 		color: $accentColor;
 	}
 	// .headline__title
 	&__title {
 		position: relative;
-		font-size: rem(55);
+		@include adaptiveValue("font-size", 55, 34, 0, 992, 480);
 		line-height: math.div(82, 55);
+		text-align: center;
 		// .headline_under
 		&_under {
 			width: max-content;
 			padding-bottom: rem(16);
+			text-align: left;
 			&::before {
 				content: "";
 				position: absolute;
@@ -31,6 +33,9 @@
 				width: percent(175, 525);
 				height: rem(5);
 				background-color: $accentColor;
+			}
+			@media (max-width: $mobileSmall) {
+				width: auto;
 			}
 		}
 		&_center {
@@ -57,4 +62,28 @@
 	width: 1px;
 	padding: 0;
 	border: 0;
+}
+
+.menu-open .wrapper {
+	position: relative;
+	// transition: all 0.3s ease 0s;
+	&::before {
+		z-index: 20;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: transparent;
+		content: "";
+		transition: all 0.3s ease 0s;
+		@media (max-width: $tablet) {
+			background-color: #000;
+			opacity: 70%;
+			transition: all 0.3s ease 0s;
+			// .menu-open & {
+			// 	opacity: 70%;
+			// }
+		}
+	}
 }

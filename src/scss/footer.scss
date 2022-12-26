@@ -5,15 +5,21 @@
 	}
 	// .footer__top
 	&__top {
-		padding-top: rem(90);
-		padding-bottom: rem(200);
+		@include adaptiveValue("padding-top", 90, 40, 0, 992, 480);
+		@include adaptiveValue("padding-bottom", 200, 40, 0, 992, 480);
 		@include gridCards($min: 175px);
 		row-gap: rem(100);
+		@media (max-width: $mobileSmall) {
+			@include gridCards($min: 280px);
+		}
 	}
 	// .footer__col
 	&__col {
 		&_contact {
 			grid-column: span 2;
+			@media (max-width: $mobileSmall) {
+				grid-column: span 1;
+			}
 		}
 	}
 	// .footer__contact
@@ -24,8 +30,8 @@
 	// .footer__logo
 	&__logo {
 		display: inline-block;
+		@include adaptiveValue("margin-bottom", 47, 20, 0, 992, 480);
 		line-height: math.div(36, 24);
-		margin-bottom: rem(47);
 		img {
 			width: rem(145);
 			height: rem(36);
@@ -40,7 +46,7 @@
 	}
 	// .footer__title
 	&__title {
-		margin-bottom: rem(47);
+		@include adaptiveValue("margin-bottom", 47, 20, 0, 992, 480);
 		font-weight: 600;
 		font-size: rem(24);
 		line-height: math.div(36, 24);
@@ -71,14 +77,18 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		flex-wrap: wrap;
 		gap: rem(30);
+		row-gap: rem(10);
 		padding-bottom: rem(40);
 	}
 	// .footer__copyright
 	&__copyright {
+		line-height: 140%;
 	}
 	// .footer__by
 	&__by {
+		line-height: 140%;
 	}
 }
 .socials {

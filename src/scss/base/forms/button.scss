@@ -3,6 +3,10 @@
 
 .btn {
 	display: inline-block;
+	// @include adaptiveValue("padding-top", 14, 10, 0, 992, 768);
+	// @include adaptiveValue("padding-bottom", 14, 10, 0, 992, 768);
+	// @include adaptiveValue("padding-right", 48, 24, 0, 992, 768);
+	// @include adaptiveValue("padding-left", 48, 24, 0, 992, 768);
 	padding: rem(14) rem(48);
 	text-align: center;
 	font-weight: 700;

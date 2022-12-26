@@ -1,6 +1,8 @@
 //====================================================================================================
 .hero {
 	position: relative;
+	@include adaptiveValue("padding-top", 150, 90, 0, 992, 768);
+	@include adaptiveValue("padding-bottom", 320, 100, 0, 992, 768);
 	padding-top: rem(150);
 	padding-bottom: rem(320);
 	color: $white;
@@ -36,16 +38,20 @@
 	}
 	// .hero__price
 	&__price {
-		margin-bottom: rem(25);
+		@include adaptiveValue("margin-bottom", 25, 10, 0, 992, 768);
 		font-weight: 700;
+		@include adaptiveValue("font-size", 26, 20, 0, 992, 480);
 		font-size: rem(26);
 		line-height: math.div(39, 26);
 	}
 	// .hero__title
 	&__title {
 		font-weight: 600;
-		font-size: rem(64);
+		@include adaptiveValue("font-size", 64, 40, 0, 992, 480);
 		line-height: math.div(96, 64);
+		@media (max-width: $tablet) {
+			line-height: 120%;
+		}
 	}
 	// .hero__order
 	&__order {
@@ -53,24 +59,33 @@
 		align-items: flex-start;
 		gap: rem(30);
 		margin-bottom: rem(90);
+		@include adaptiveValue("margin-bottom", 90, 30, 0, 992, 480);
+		@media (max-width: $mobile) {
+			flex-direction: column;
+		}
 	}
 	// .hero__discount
 	&__discount {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		width: rem(205);
-		height: rem(205);
+		@include adaptiveValue("width", 205, 150, 0, 992, 480);
+		@include adaptiveValue("height", 205, 150, 0, 992, 480);
+		// width: rem(205);
+		// height: rem(205);
+		@include adaptiveValue("padding-top", 15, 30, 0, 992, 480);
 		padding-top: rem(15);
 		background-color: $accentColor;
 		border-radius: 50%;
 		font-weight: 700;
 		font-size: rem(32);
+		@include adaptiveValue("font-size", 32, 22, 0, 992, 480);
 		line-height: math.div(48, 32);
 	}
 	// .hero__percent
 	&__percent {
-		font-size: rem(64);
+		// font-size: rem(64);
+		@include adaptiveValue("font-size", 64, 32, 0, 992, 480);
 		line-height: math.div(96, 64);
 	}
 	// .hero__text
@@ -78,7 +93,11 @@
 		max-width: rem(330);
 		font-weight: 600;
 		font-size: rem(36);
+		@include adaptiveValue("font-size", 36, 24, 0, 992, 480);
 		line-height: math.div(54, 36);
+		@media (max-width: $mobile) {
+			max-width: 100%;
+		}
 	}
 	// .hero__btn
 	&__btn {
@@ -93,7 +112,7 @@
 	}
 	// .categories__headline
 	&__headline {
-		margin-bottom: rem(90);
+		@include adaptiveValue("margin-bottom", 90, 30, 0, 992, 480);
 	}
 	// .categories__food
 	&__food {
@@ -101,8 +120,10 @@
 	}
 	// .categories__advantages
 	&__advantages {
-		padding-top: rem(45);
-		padding-bottom: rem(60);
+		@include adaptiveValue("padding-top", 45, 30, 0, 992, 480);
+		@include adaptiveValue("padding-bottom", 60, 40, 0, 992, 480);
+		// padding-top: rem(45);
+		// padding-bottom: rem(60);
 		background-color: $accentColor;
 	}
 	// .categories__list
@@ -120,6 +141,10 @@
 		width: percent(278, 280);
 		margin: 0 auto;
 		padding-bottom: percent(260, 280);
+		@media (max-width: em(620)) {
+			width: 73%;
+			padding-bottom: 62%;
+		}
 	}
 	// .food-categories__title
 	&__title {
@@ -138,6 +163,10 @@
 .advantages {
 	@include gridCards($min: 380px);
 	color: $white;
+	@media (max-width: $tablet) {
+		@include gridCards($min: 280px);
+		row-gap: rem(40);
+	}
 	// .advantages__item
 	&__item {
 		text-align: center;
@@ -149,7 +178,7 @@
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		margin-bottom: rem(40);
+		@include adaptiveValue("margin-bottom", 40, 20, 0, 992, 480);
 		background-color: $white;
 		border-radius: 50%;
 		svg {
@@ -163,7 +192,7 @@
 	}
 	// .advantages__title
 	&__title {
-		margin-bottom: rem(20);
+		@include adaptiveValue("margin-bottom", 20, 10, 0, 992, 480);
 		font-weight: 700;
 		font-size: rem(20);
 		line-height: math.div(30, 20);
@@ -185,6 +214,10 @@
 	&__list {
 		margin-top: rem(20);
 		@include gridCards($min: 380px);
+		row-gap: rem(40);
+		@media (max-width: $tablet) {
+			@include gridCards($min: 280px);
+		}
 	}
 	// .outlets__item
 	&__item {
@@ -194,6 +227,9 @@
 		width: 100%;
 		padding-bottom: percent(563, 380);
 		margin-bottom: rem(20);
+		@media (max-width: $tablet) {
+			padding-bottom: 118%;
+		}
 	}
 	// .outlets__icon
 	&__icon {
@@ -217,17 +253,23 @@
 }
 //====================================================================================================
 .delivery {
-	padding-top: rem(108);
-	padding-bottom: rem(70);
+	@include adaptiveValue("padding-top", 108, 70, 0, 992, 480);
+	@include adaptiveValue("padding-bottom", 70, 50, 0, 992, 480);
 	// .delivery__container
 	&__container {
 		display: flex;
 		align-items: flex-start;
 		gap: rem(30);
+		@media (max-width: $tablet) {
+			flex-direction: column;
+		}
 	}
 	// .delivery__info
 	&__info {
 		flex: 1 1 percent(585, 1200);
+		@media (max-width: $tablet) {
+			width: 100%;
+		}
 	}
 	// .delivery__headline
 	&__headline {
@@ -239,6 +281,9 @@
 		font-weight: 600;
 		font-size: rem(26);
 		line-height: math.div(39, 26);
+		@media (max-width: $tablet) {
+			font-size: rem(22);
+		}
 	}
 	// .delivery__text
 	&__text {
@@ -278,6 +323,14 @@
 		img {
 			border-radius: 50%;
 		}
+		@media (max-width: $tablet) {
+			width: 48.75%;
+			align-self: center;
+		}
+		@media (max-width: $mobile) {
+			width: 90%;
+			padding-bottom: 90%;
+		}
 	}
 }
 //========================================================================================================================================================
@@ -290,10 +343,21 @@
 	// .team__headline
 	&__headline {
 		margin-bottom: rem(84);
+		@include adaptiveValue("margin-bottom", 84, 50, 0, 992, 480);
+		span {
+			@media (max-width: $mobile) {
+				text-align: center;
+			}
+		}
 	}
 	// .team__list
 	&__list {
 		@include gridCards($min: 277px);
+		row-gap: rem(40);
+		@media (max-width: $mobile) {
+			justify-items: center;
+			text-align: center;
+		}
 	}
 	// .team__item
 	&__item {
@@ -302,6 +366,7 @@
 	&__image {
 		max-width: rem(300);
 		margin-bottom: rem(25);
+		@include adaptiveValue("margin-bottom", 25, 10, 0, 992, 480);
 		img {
 			width: 100%;
 		}
@@ -321,8 +386,8 @@
 }
 //========================================================================================================================================================
 .offer {
-	padding-top: rem(65);
-	padding-bottom: rem(135);
+	@include adaptiveValue("padding-top", 65, 20, 0, 992, 480);
+	@include adaptiveValue("padding-bottom", 135, 70, 0, 992, 480);
 	color: $white;
 	background: linear-gradient(91.02deg, #ffcc00 17.25%, rgba(255, 204, 0, 0) 178.38%);
 	// .offer__container
@@ -330,24 +395,30 @@
 		display: flex;
 		align-items: center;
 		gap: rem(30);
+		@media (max-width: em(575)) {
+			flex-direction: column;
+		}
 	}
 	// .offer__info
 	&__info {
 		padding-top: rem(40);
 		flex: 1 1 percent(585, 1200);
+		@media (max-width: em(575)) {
+			margin-bottom: rem(20);
+		}
 	}
 	// .offer__title
 	&__title {
-		margin-bottom: rem(30);
+		@include adaptiveValue("margin-bottom", 30, 15, 0, 992, 480);
 		font-weight: 700;
-		font-size: rem(55);
-		line-height: math.div(82, 55);
+		@include adaptiveValue("font-size", 55, 36, 0, 992, 480);
+		line-height: 120%;
 	}
 	// .offer__text
 	&__text {
-		margin-bottom: 70px;
+		@include adaptiveValue("margin-bottom", 70, 30, 0, 992, 480);
 		font-weight: 600;
-		font-size: rem(26);
+		@include adaptiveValue("font-size", 26, 20, 0, 992, 480);
 		line-height: math.div(39, 26);
 	}
 	// .offer__btns
@@ -373,6 +444,10 @@
 	&__image-ibg {
 		flex: 1 1 percent(585, 1200);
 		padding-bottom: percent(534, 1200);
+		@media (max-width: em(575)) {
+			width: 100%;
+			padding-bottom: 100%;
+		}
 	}
 }
 //========================================================================================================================================================
@@ -384,6 +459,9 @@
 	// .partners__list
 	&__list {
 		@include gridCards($min: 277px);
+		@media (max-width: $mobile) {
+			@include gridCards($min: 180px);
+		}
 	}
 	// .partners__item
 	&__item {
@@ -394,4 +472,3 @@
 		padding-bottom: percent(200, 277);
 	}
 }
-
