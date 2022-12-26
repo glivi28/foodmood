@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('html/_head.htm',{
-"title":"FoodMood"
-})
+
+<head>
+	<title>FoodMood</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20221226033244">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
 <body>
 	<div class="wrapper">
-		@@include('html/_header.htm',{})
+		<header class="header">
+			<div class="header__container">
+				<a href="#" class="header__logo"><img src="img/logo.svg" alt="FoodMood logo"></a>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a data-goto=".hero" href="#" class="menu__link">HOME</a></li>
+							<li class="menu__item"><a data-goto=".categories" data-goto-top="30" href="#" class="menu__link">OUR MENU</a>
+							</li>
+							<li class="menu__item"><a data-goto=".offer" href="#" class="menu__link">OFFER</a></li>
+							<li class="menu__item"><a data-goto=".team" href="#" class="menu__link">ABOUT</a></li>
+							<li class="menu__item"><a data-goto=".footer" href="#" class="menu__link">CONTACT</a></li>
+						</ul>
+					</nav>
+					<a href="#" class="menu__btn btn">DOWNLOAD APP</a>
+					<button type="button" class="menu__icon icon-menu" aria-label="Open Close menu"><span></span></button>
+				</div>
+			</div>
+		</header>
 		<main class="page">
 			<section class="hero">
 				<div class="hero__container">
@@ -37,28 +63,28 @@
 					<ul class="categories__food food-categories">
 						<li class="food-categories__item">
 							<div class="food-categories__image-ibg food-categories__image-ibg_contain">
-								<img src="@img/pizza.png" alt="Pizza">
+								<picture><source srcset="img/pizza.webp" type="image/webp"><img src="img/pizza.png" alt="Pizza"></picture>
 							</div>
 							<h3 class="food-categories__title">Pizza</h3>
 							<p class="food-categories__count">20 Restaurants Foods</p>
 						</li>
 						<li class="food-categories__item">
 							<div class="food-categories__image-ibg food-categories__image-ibg_contain">
-								<img src="@img/pasta.png" alt="Pasta">
+								<picture><source srcset="img/pasta.webp" type="image/webp"><img src="img/pasta.png" alt="Pasta"></picture>
 							</div>
 							<h3 class="food-categories__title">Pasta</h3>
 							<p class="food-categories__count">15 Restaurants Foods</p>
 						</li>
 						<li class="food-categories__item">
 							<div class="food-categories__image-ibg food-categories__image-ibg_contain">
-								<img src="@img/shakes.png" alt="Shakes">
+								<picture><source srcset="img/shakes.webp" type="image/webp"><img src="img/shakes.png" alt="Shakes"></picture>
 							</div>
 							<h3 class="food-categories__title">Shakes</h3>
 							<p class="food-categories__count">20 Restaurants Foods</p>
 						</li>
 						<li class="food-categories__item">
 							<div class="food-categories__image-ibg food-categories__image-ibg_contain">
-								<img src="@img/burger.png" alt="Burger">
+								<picture><source srcset="img/burger.webp" type="image/webp"><img src="img/burger.png" alt="Burger"></picture>
 							</div>
 							<h3 class="food-categories__title">Burger</h3>
 							<p class="food-categories__count">25 Restaurants Foods</p>
@@ -71,7 +97,7 @@
 							<li class="advantages__item">
 								<div class="advantages__icon">
 									<svg>
-										<use xlink:href="@img/icons/icons.svg#car"></use>
+										<use xlink:href="img/icons/icons.svg#car"></use>
 									</svg>
 								</div>
 								<h4 class="advantages__title">
@@ -84,7 +110,7 @@
 							<li class="advantages__item">
 								<div class="advantages__icon">
 									<svg>
-										<use xlink:href="@img/icons/icons.svg#burger"></use>
+										<use xlink:href="img/icons/icons.svg#burger"></use>
 									</svg>
 								</div>
 								<h4 class="advantages__title">
@@ -97,7 +123,7 @@
 							<li class="advantages__item">
 								<div class="advantages__icon">
 									<svg>
-										<use xlink:href="@img/icons/icons.svg#clock"></use>
+										<use xlink:href="img/icons/icons.svg#clock"></use>
 									</svg>
 								</div>
 								<h4 class="advantages__title">
@@ -122,33 +148,33 @@
 					<ul class="outlets__list">
 						<li class="outlets__item">
 							<div class="outlets__image-ibg">
-								<img src="@img/fulton.jpg" alt="Fulton">
+								<picture><source srcset="img/fulton.webp" type="image/webp"><img src="img/fulton.jpg" alt="Fulton"></picture>
 							</div>
 							<div class="outlets__icon">
 								<svg>
-									<use xlink:href="@img/icons/icons.svg#map"></use>
+									<use xlink:href="img/icons/icons.svg#map"></use>
 								</svg>
 							</div>
 							<h3 class="outlets__location">762 Fulton St San Francisco, California(CA), 94102</h3>
 						</li>
 						<li class="outlets__item">
 							<div class="outlets__image-ibg">
-								<img src="@img/ceres.jpg" alt="Ceres">
+								<picture><source srcset="img/ceres.webp" type="image/webp"><img src="img/ceres.jpg" alt="Ceres"></picture>
 							</div>
 							<div class="outlets__icon">
 								<svg>
-									<use xlink:href="@img/icons/icons.svg#map"></use>
+									<use xlink:href="img/icons/icons.svg#map"></use>
 								</svg>
 							</div>
 							<h3 class="outlets__location">66 Ceres St San Francisco, California(CA), 94124</h3>
 						</li>
 						<li class="outlets__item">
 							<div class="outlets__image-ibg">
-								<img src="@img/sutter.jpg" alt="Sutter">
+								<picture><source srcset="img/sutter.webp" type="image/webp"><img src="img/sutter.jpg" alt="Sutter"></picture>
 							</div>
 							<div class="outlets__icon">
 								<svg>
-									<use xlink:href="@img/icons/icons.svg#map"></use>
+									<use xlink:href="img/icons/icons.svg#map"></use>
 								</svg>
 							</div>
 							<h3 class="outlets__location">766 Sutter St San Francisco, California(CA), 94109</h3>
@@ -171,7 +197,7 @@
 						<ul class="delivery__items">
 							<li class="delivery__item">
 								<div class="delivery__image">
-									<img src="@img/money.png" alt="Money">
+									<picture><source srcset="img/money.webp" type="image/webp"><img src="img/money.png" alt="Money"></picture>
 								</div>
 								<h4 class="delivery__name">Food Order</h4>
 								<p class="delivery__descr text">Food is the necessity of life. It provides nutrition, sustenance growth
@@ -179,7 +205,7 @@
 							</li>
 							<li class="delivery__item">
 								<div class="delivery__image">
-									<img src="@img/promote.png" alt="Money">
+									<picture><source srcset="img/promote.webp" type="image/webp"><img src="img/promote.png" alt="Money"></picture>
 								</div>
 								<h4 class="delivery__name">Promote Restaurant</h4>
 								<p class="delivery__descr text">Food can be classified into cereals, pulses, nuts and oilseeds,
@@ -188,7 +214,7 @@
 						</ul>
 					</div>
 					<div class="delivery__image-ibg">
-						<img src="@img/client.jpg" alt="Girl with pizza">
+						<picture><source srcset="img/client.webp" type="image/webp"><img src="img/client.jpg" alt="Girl with pizza"></picture>
 					</div>
 
 				</div>
@@ -204,28 +230,28 @@
 					<ul class="team__list">
 						<li class="team__item">
 							<div class="team__image">
-								<img src="@img/person-01.png" alt="Team member">
+								<picture><source srcset="img/person-01.webp" type="image/webp"><img src="img/person-01.png" alt="Team member"></picture>
 							</div>
 							<h3 class="team__member">Alizeh Anderson</h3>
 							<p class="team__position">Senior Chef</p>
 						</li>
 						<li class="team__item">
 							<div class="team__image">
-								<img src="@img/person-02.png" alt="Team member">
+								<picture><source srcset="img/person-02.webp" type="image/webp"><img src="img/person-02.png" alt="Team member"></picture>
 							</div>
 							<h3 class="team__member">Angelina John</h3>
 							<p class="team__position">Master Chef</p>
 						</li>
 						<li class="team__item">
 							<div class="team__image">
-								<img src="@img/person-03.png" alt="Team member">
+								<picture><source srcset="img/person-03.webp" type="image/webp"><img src="img/person-03.png" alt="Team member"></picture>
 							</div>
 							<h3 class="team__member">Andre Smith</h3>
 							<p class="team__position">Professor</p>
 						</li>
 						<li class="team__item">
 							<div class="team__image">
-								<img src="@img/person-04.png" alt="Team member">
+								<picture><source srcset="img/person-04.webp" type="image/webp"><img src="img/person-04.png" alt="Team member"></picture>
 							</div>
 							<h3 class="team__member">Christian Chi</h3>
 							<p class="team__position">Psychologist</p>
@@ -242,15 +268,15 @@
 						<p class="offer__text">Get flat 20% off on your first order though The Foodmood App!</p>
 						<div class="offer__btns">
 							<a href="#" class="offer__btn">
-								<img src="@img/google-play.png" alt="Goooge Play">
+								<picture><source srcset="img/google-play.webp" type="image/webp"><img src="img/google-play.png" alt="Goooge Play"></picture>
 							</a>
 							<a href="#" class="offer__btn">
-								<img src="@img/app-store.png" alt="App Store">
+								<picture><source srcset="img/app-store.webp" type="image/webp"><img src="img/app-store.png" alt="App Store"></picture>
 							</a>
 						</div>
 					</div>
 					<div class="offer__image-ibg">
-						<img src="@img/mobile.png" alt="Mobile">
+						<picture><source srcset="img/mobile.webp" type="image/webp"><img src="img/mobile.png" alt="Mobile"></picture>
 					</div>
 				</div>
 			</section>
@@ -262,22 +288,22 @@
 					<ul class="partners__list">
 						<li class="partners__item">
 							<div class="partners__image-ibg">
-								<img src="@img/foodchef.png" alt="Food Chef">
+								<picture><source srcset="img/foodchef.webp" type="image/webp"><img src="img/foodchef.png" alt="Food Chef"></picture>
 							</div>
 						</li>
 						<li class="partners__item">
 							<div class="partners__image-ibg">
-								<img src="@img/lezatoz.png" alt="Lezatoz">
+								<picture><source srcset="img/lezatoz.webp" type="image/webp"><img src="img/lezatoz.png" alt="Lezatoz"></picture>
 							</div>
 						</li>
 						<li class="partners__item">
 							<div class="partners__image-ibg">
-								<img src="@img/chef.png" alt="Chef Ganteng">
+								<picture><source srcset="img/chef.webp" type="image/webp"><img src="img/chef.png" alt="Chef Ganteng"></picture>
 							</div>
 						</li>
 						<li class="partners__item">
 							<div class="partners__image-ibg">
-								<img src="@img/tastyfood.png" alt="Food Chef">
+								<picture><source srcset="img/tastyfood.webp" type="image/webp"><img src="img/tastyfood.png" alt="Food Chef"></picture>
 							</div>
 						</li>
 					</ul>
@@ -285,9 +311,102 @@
 			</section>
 			<!-- /.partners -->
 		</main>
-		@@include('html/_footer.htm',{})
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__top">
+					<div class="footer__col footer__col_contact">
+						<div class="footer__contact">
+							<a href="#" class="footer__logo">
+								<img src="img/logo-footer.svg" alt="FooMood logo">
+							</a>
+							<p class="footer__text text">Vivamus convallis fermen sollicitudin et, vitae elit in vel ultrices sed in urna
+								ipsum ullamcorper auctor.</p>
+							<ul class="footer__socials socials">
+								<li class="socials__item">
+									<a href="#" class="socials__link" aria-label="Go to our Twitter">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#twit"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="socials__item">
+									<a href="#" class="socials__link" aria-label="Go to our Facebook">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#fb"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="socials__item">
+									<a href="#" class="socials__link" aria-label="Go to our Instagram">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#inst"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__col">
+						<div class="footer__title">ABOUT US</div>
+						<ul class="footer__list">
+							<li class="footer__item">
+								<a href="#" class="footer__link">Our Story</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link">Our Locations</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link">Current Deals</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link">Contact Us</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__col">
+						<div class="footer__title">OUR MENU</div>
+						<ul class="footer__list">
+							<li class="footer__item">
+								<a href="#" class="footer__link">Pizza</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link">Pasta</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link">Dessert</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link">Take & Bake</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__col">
+						<div class="footer__title">OUR LOCATION</div>
+						<ul class="footer__list">
+							<li class="footer__item">
+								<a href="#" class="footer__link">The FOODMOOD Rome</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link">The FOODMOOD Madrid
+								</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link">The FOODMOOD Paris</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link">The FOODMOOD Miami</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<p class="footer__copyright">Copyright © 2022 The Pizzeria</p>
+					<p class="footer__by">Powered by The FOODMOOD</p>
+				</div>
+			</div>
+		</footer>
 	</div>
-	@@include('html/_js.htm',{})
+	<script src="js/app.min.js?_v=20221226033244"></script>
 </body>
 
 </html>

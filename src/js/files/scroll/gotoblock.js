@@ -49,8 +49,8 @@ export let gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 
 				behavior: "smooth"
 			});
 		}
-		FLS(`[gotoBlock]: Юхуу...їдемо до ${targetBlock}`);
+		// FLS(`[gotoBlock]: Юхуу...їдемо до ${targetBlock}`);
 	} else {
-		FLS(`[gotoBlock]: Йой... Такого блоку немає на сторінці: ${targetBlock}`);
+		// FLS(`[gotoBlock]: Йой... Такого блоку немає на сторінці: ${targetBlock}`);
 	}
 };
